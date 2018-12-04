@@ -1157,3 +1157,123 @@ input:active, input:focus, input:hover, textarea:active, textarea:focus, textare
     color: #fff;
     padding: 5px;
 }
+
+/*custom media queries*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    h1 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    h3 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    h4 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width: 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width: 320px) {
+    h1 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    h3 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    h4 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+    h1 span {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h3 span {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    h4 span {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+    h1 span {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h3 span {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    h4 span {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .section-about .person-about {
+        margin-left: 0;
+    }
+    #fp-nav {
+        display: none !important;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    h1 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    h3 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    h4 span {
+        padding-left: unset;
+        padding-right: unset;
+    }
+}
