@@ -18,7 +18,7 @@
   1. GENERAL STYLING
   --------------------------*/
 
-/*PERSONAL ADDITIONS*/
+/*CUSTOM ADDITIONS*/
 
 @font-face {
     font-family: 'Apercu Pro Italic';
@@ -96,6 +96,13 @@ h4 span {
     box-shadow: .5em .5em #fffc59;
 }
 
+.g-recaptcha > div {
+    margin: 0 0 2em 0 !important;
+    text-align: center;
+    width: auto !important;
+    height: auto !important;
+}
+
 .jumbotron {
     background-color: #232323;
 }
@@ -127,6 +134,10 @@ h4 span {
     margin-bottom: 1.5em;
 }
 
+.status-massage {
+    margin: 1em 0 1em 0;
+}
+
 #fp-nav {
     display: unset !important;
 }
@@ -142,6 +153,7 @@ html {
 /* line 4, sass/components/_base.sass */
 body {
     background: #9d9d9d;
+    color: #fff;
     overflow: hidden;
 }
 

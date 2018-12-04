@@ -47,16 +47,16 @@
     $loader.addClass('loader-anim-start');
     window.setTimeout(function() {
       $loader.addClass('loader-anim-end');
-    }, 1000);
+    }, 400);
     window.setTimeout(function() {
       $preloader.addClass('preloader-container-left');
-    }, 2000);
+    }, 600);
     window.setTimeout(function() {
       $preloader.hide();
       $body.addClass('loaded');
       siteLoad = true;
       $onLoadTrigger.trigger('click');
-    }, 3000);
+    }, 800);
   }, false);
 
 
@@ -194,8 +194,8 @@
         var animationDelay = $this.data('anim-delay') || 1;
         var animationDuration = $this.data('anim-duration') || 500;
         var transitions = 'all .5s ease, ' +
-          'transform ' + animationDuration / 1000 + 's ' + animEasing + ' ' + animationDelay / 10 + 's, ' +
-          'opacity ' + animationDuration / 1000 + 's ' + animEasing + ' ' + animationDelay / 10 + 's';
+          'transform ' + animationDuration / 500 + 's ' + animEasing + ' ' + animationDelay / 10 + 's, ' +
+          'opacity ' + animationDuration / 500 + 's ' + animEasing + ' ' + animationDelay / 10 + 's';
         $this.css({
           'transition': transitions,
           'opacity': 1
@@ -324,6 +324,8 @@
    --------------------------------------------- */
   var $form = $('form.mail-form');
   var $statusMassage = $form.find('.status-massage');
+  var captchaResponse = window.grecaptcha.getResponse();
+
   $form.submit(function() {
     $statusMassage.find('*').remove();
     var hasError = false;
@@ -344,16 +346,24 @@
     });
     if (!hasError) {
       var formInput = $(this).serialize();
-      $.post($(this).attr('action'), formInput, function() {
+      if (captchaResponse.length === 0) {
         $statusMassage.find('*').remove();
         $statusMassage.append('' +
           '<span class="success">' +
           '<i class="icon ion-checkmark-round"></i>  ' +
-          'Thank you. Your email was sent successfully.' +
+          'You must prove that you aren\'t a robot.' +
           '</span>');
-      });
+      } else {
+        $.post($(this).attr('action'), formInput, function() {
+          $statusMassage.find('*').remove();
+          $statusMassage.append('' +
+            '<span class="success">' +
+            '<i class="icon ion-checkmark-round"></i>  ' +
+            'Thank you. Your email was sent successfully.' +
+            '</span>');
+        });
+      }
     }
-    return false;
   });
 
   // Defer images.
