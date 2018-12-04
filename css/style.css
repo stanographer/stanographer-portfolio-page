@@ -1,0 +1,1152 @@
+/*
+ * Project:        NOISE - HTML5 Template
+ * Version:        1.0
+ * Author:         Neon Unicorns
+ */
+/* ---------------------------
+  TABLE OF CONTENTS
+  1. GENERAL STYLING
+  2. PRELOADER
+  3. TYPOGRAPHY
+  4. BUTTONS
+  5. FORM
+  6. POPUP
+  7. MENU
+  8. SECTIONS
+  --------------------------*/
+/* ---------------------------
+  1. GENERAL STYLING
+  --------------------------*/
+
+/*PERSONAL ADDITIONS*/
+
+@font-face {
+    font-family: 'Apercu Pro Italic';
+    src: url('../fonts/apercu/ApercuPro-Italic.eot');
+    src: url('../fonts/apercu/ApercuPro-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu/ApercuPro-Italic.woff2') format('woff2'),
+    url('../fonts/apercu/ApercuPro-Italic.woff') format('woff'),
+    url('../fonts/apercu/ApercuPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Apercu Pro Light';
+    src: url('../fonts/apercu/ApercuPro-Light.eot');
+    src: url('../fonts/apercu/ApercuPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu/ApercuPro-Light.woff2') format('woff2'),
+    url('../fonts/apercu/ApercuPro-Light.woff') format('woff'),
+    url('../fonts/apercu/ApercuPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Pro Regular';
+    src: url('../fonts/apercu/Apercu-Regular.eot');
+    src: url('../fonts/apercu/Apercu-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu/Apercu-Regular.woff2') format('woff2'),
+    url('../fonts/apercu/Apercu-Regular.woff') format('woff'),
+    url('../fonts/apercu/Apercu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Pro Medium';
+    src: url('../fonts/apercu/ApercuPro-Medium.eot');
+    src: url('../fonts/apercu/ApercuPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu/ApercuPro-Medium.woff2') format('woff2'),
+    url('../fonts/apercu/ApercuPro-Medium.woff') format('woff'),
+    url('../fonts/apercu/ApercuPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+    color: #fff;
+    line-height: 38px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h4 span {
+    background-color: #fff;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.highlighted-white {
+    background-color: #fff !important;
+    color: #000;
+}
+
+.highlighted-yellow {
+    background-color: #fffc59 !important;
+    color: #000;
+}
+
+.box-shadow {
+    -webkit-box-shadow: .5em .5em #fffc59; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: .5em .5em #fffc59; /* Firefox 3.5 - 3.6 */
+    box-shadow: .5em .5em #fffc59;
+}
+
+.jumbotron {
+    background-color: #232323;
+}
+
+.margin--top-small {
+    margin-top: 2em;
+}
+
+.mfp-wrap {
+    cursor: url(../img/zoom-out-cur.png) 25 25, zoom-out;
+}
+
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
+    width: unset;
+}
+
+.portfolio--item-h2 {
+    margin: 1em 0 1em 15px;
+    display: inline-block;
+    padding: 0 5px 0 5px;
+}
+
+.portfolio--item-overlay {
+    background-color: #000;
+    padding: 0 3em 3em 3em;
+}
+
+/*END ADDITIONS*/
+
+/* line 1, sass/components/_base.sass */
+html {
+    overflow: visible !important;
+    margin: 0 !important;
+}
+
+/* line 4, sass/components/_base.sass */
+body {
+    background: #9d9d9d;
+    overflow: hidden;
+}
+
+/* Body state */
+/* line 9, sass/components/_base.sass */
+body.loaded {
+    overflow-x: hidden !important;
+}
+
+/* line 11, sass/components/_base.sass */
+body.showMenu {
+    overflow: hidden !important;
+}
+
+/* line 13, sass/components/_base.sass */
+body.fp-responsive .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Helpers */
+@media (max-width: 767px) {
+    /* line 18, sass/components/_base.sass */
+    .text-center-xs {
+        text-align: center;
+    }
+}
+
+/* line 21, sass/components/_base.sass */
+.inline-list {
+    list-style-type: none;
+    margin: 40px 0;
+    padding: 0;
+    cursor: default;
+}
+
+/* line 26, sass/components/_base.sass */
+.inline-list > li {
+    margin: 0 15px 0 0;
+    display: inline-block;
+}
+
+/* line 29, sass/components/_base.sass */
+.inline-list > li:last-of-type {
+    margin-right: 0 !important;
+}
+
+/* Background */
+/* line 33, sass/components/_base.sass */
+#bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/bg_resized.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    z-index: -3;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+/* Fullpage.js Navigation */
+@media (max-width: 767px) {
+    /* line 45, sass/components/_base.sass */
+    #fp-nav {
+        display: none !important;
+    }
+}
+
+/* line 48, sass/components/_base.sass */
+#fp-nav ul > li {
+    margin: 10px 7px;
+}
+
+/* line 50, sass/components/_base.sass */
+#fp-nav ul > li > a {
+    position: relative;
+}
+
+/* line 52, sass/components/_base.sass */
+#fp-nav ul > li > a:before {
+    content: 'link';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* line 62, sass/components/_base.sass */
+#fp-nav ul > li > a.active:before {
+    right: 35px !important;
+    opacity: 1;
+}
+
+/* line 66, sass/components/_base.sass */
+#fp-nav ul > li:hover > a:before {
+    right: 25px;
+    opacity: 1;
+}
+
+/* line 69, sass/components/_base.sass */
+#fp-nav ul > li a[href^="#home"]:before {
+    content: 'home';
+}
+
+/* line 71, sass/components/_base.sass */
+#fp-nav ul > li a[href^="#about"]:before {
+    content: 'about';
+}
+
+/* line 73, sass/components/_base.sass */
+#fp-nav ul > li a[href^="#skills"]:before {
+    content: 'skills';
+}
+
+/* line 75, sass/components/_base.sass */
+#fp-nav ul > li a[href^="#portfolio"]:before {
+    content: 'portfolio';
+}
+
+/* line 77, sass/components/_base.sass */
+#fp-nav ul > li a[href^="#contact"]:before {
+    content: 'contact';
+}
+
+/* Full page navigation normal state */
+/* line 80, sass/components/_base.sass */
+#fp-nav ul li a span {
+    background-color: #fff !important;
+    height: 2px !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    left: 0 !important;
+    margin: -2px 0 0 -2px !important;
+    width: 6px;
+}
+
+/* Full page navigation hover state */
+/* line 88, sass/components/_base.sass */
+#fp-nav ul li:hover a span {
+    width: 12px;
+    left: -6px !important;
+}
+
+/* Full page navigation active state */
+/* line 92, sass/components/_base.sass */
+#fp-nav ul li a.active span {
+    width: 24px !important;
+    left: -14px !important;
+}
+
+/*  Animation */
+/* line 97, sass/components/_base.sass */
+.anim-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* line 101, sass/components/_base.sass */
+.anim-container .anim-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    background-color: #000;
+}
+
+/* line 108, sass/components/_base.sass */
+.anim-container.animm .anim-mask {
+    right: -1px;
+    left: 100%;
+}
+
+/* line 111, sass/components/_base.sass */
+.anim-container.animm .slide-anim {
+    opacity: 1 !important;
+}
+
+/* ---------------------------
+  2. PRELOADER
+  --------------------------*/
+/* line 1, sass/components/_preloader.sass */
+.preloader-container {
+    position: fixed;
+    float: left;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: #000;
+    z-index: 999999;
+    -webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 11, sass/components/_preloader.sass */
+.preloader-container.preloader-container-left {
+    margin-left: 100%;
+}
+
+/* line 13, sass/components/_preloader.sass */
+.preloader-container .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 20px;
+    background: #fff;
+    margin-left: -200px;
+}
+
+/* line 21, sass/components/_preloader.sass */
+.preloader-container .loader.loader-anim-start {
+    width: 400px;
+    -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 24, sass/components/_preloader.sass */
+.preloader-container .loader.loader-anim-end {
+    width: 0;
+    margin-left: 200px;
+    -webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+}
+
+/* ---------------------------
+  3. TYPOGRAPHY
+  --------------------------*/
+/* Typography */
+/* line 2, sass/components/_typography.sass */
+body {
+    font-family: 'Apercu Pro Medium', sans-serif;
+}
+
+/* line 5, sass/components/_typography.sass */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: #fff;
+    line-height: 78px;
+}
+
+/* line 11, sass/components/_typography.sass */
+h1 span {
+    background-color: #fff;
+    color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* line 17, sass/components/_typography.sass */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #fff;
+}
+
+/* line 22, sass/components/_typography.sass */
+h2 span {
+    background-color: #fff;
+    color: #000;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* line 28, sass/components/_typography.sass */
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    line-height: 48px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+/* line 36, sass/components/_typography.sass */
+h3 span {
+    background-color: #fff;
+    color: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* line 42, sass/components/_typography.sass */
+p {
+    font-family: 'Apercu Pro Medium', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* line 48, sass/components/_typography.sass */
+p span {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* line 55, sass/components/_typography.sass */
+a {
+    text-decoration: none;
+    outline: 0;
+    color: #fff;
+}
+
+/* line 59, sass/components/_typography.sass */
+a:hover, a:focus, a:active, a.is-active, a.active {
+    text-decoration: none;
+    outline: 0;
+    color: #fff;
+}
+
+/* Selection style */
+/* line 66, sass/components/_typography.sass */
+::-moz-selection {
+    color: #000;
+    background: #fff;
+}
+
+::selection {
+    color: #000;
+    background: #fff;
+}
+
+/* hr */
+/* line 71, sass/components/_typography.sass */
+hr {
+    width: 70px;
+    border-top: 7px solid #fff;
+}
+
+/* ---------------------------
+  4. BUTTONS
+  --------------------------*/
+/* line 1, sass/components/_buttons.sass */
+.btn-black {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Apercu Pro Medium', sans-serif;
+    font-weight: 900;
+    letter-spacing: .3em;
+    font-size: 1.1rem;
+    overflow: hidden;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    text-decoration: none;
+    outline: 0;
+}
+
+/* line 17, sass/components/_buttons.sass */
+.btn-black:hover, .btn-black:focus, .btn-black:active, .btn-black.is-active, .btn-black.active {
+    text-decoration: none !important;
+    outline: 0 !important;
+}
+
+/* line 20, sass/components/_buttons.sass */
+.btn-black:hover, .btn-black:active {
+    background-color: #fff;
+    color: #000;
+}
+
+/* line 23, sass/components/_buttons.sass */
+.btn-black.invert {
+    background-color: #fff;
+    color: #000;
+}
+
+/* line 26, sass/components/_buttons.sass */
+.btn-black.invert:hover, .btn-black.invert:active {
+    background: transparent;
+    color: #fff;
+}
+
+/* line 30, sass/components/_buttons.sass */
+.button-block {
+    margin-top: 40px;
+}
+
+/* line 32, sass/components/_buttons.sass */
+.button-block a.btn-black {
+    margin-right: 30px;
+}
+
+/* line 34, sass/components/_buttons.sass */
+.button-block a.btn-black:last-of-type {
+    margin-right: 0 !important;
+}
+
+/* ---------------------------
+  5. FORM
+  --------------------------*/
+/* line 1, sass/components/_form.sass */
+input, textarea {
+    padding: 15px 20px;
+    border: 2px solid #f2f2f2;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: 0;
+    font-family: 'Apercu Pro Medium', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* line 14, sass/components/_form.sass */
+input:active, input:focus, input:hover, textarea:active, textarea:focus, textarea:hover {
+    outline: none;
+}
+
+/* ---------------------------
+  6. POPUP
+  --------------------------*/
+/* Popup zoom animation */
+/* line 3, sass/components/_popup.sass */
+.mfp-zoom-in .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+/* line 7, sass/components/_popup.sass */
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+/* line 11, sass/components/_popup.sass */
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+/* line 14, sass/components/_popup.sass */
+.mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+/* line 17, sass/components/_popup.sass */
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+/* line 20, sass/components/_popup.sass */
+.mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/* Close cursor */
+/* line 24, sass/components/_popup.sass */
+.mfp-zoom-out-cur, .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: url(../img/zoom-out-cur.png) 25 25, -webkit-zoom-out;
+    cursor: url(../img/zoom-out-cur.png) 25 25, zoom-out;
+}
+
+/* ---------------------------
+  7. MENU
+  --------------------------*/
+/* Menu */
+/* line 2, sass/components/_menu.sass */
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background: #000;
+    z-index: 98;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 13, sass/components/_menu.sass */
+.menu.show {
+    left: 0;
+}
+
+/* line 15, sass/components/_menu.sass */
+.menu .menu-links-ul {
+    margin-top: 60px;
+    margin-left: 60px;
+    list-style: none;
+}
+
+@media (max-width: 767px) {
+    /* line 15, sass/components/_menu.sass */
+    .menu .menu-links-ul {
+        margin-left: 10px;
+    }
+}
+
+/* line 21, sass/components/_menu.sass */
+.menu .menu-links-ul .menu-links-li {
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: #fff;
+    position: relative;
+    float: left;
+    clear: both;
+}
+
+@media (max-width: 767px) {
+    /* line 21, sass/components/_menu.sass */
+    .menu .menu-links-ul .menu-links-li {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 479px) {
+    /* line 21, sass/components/_menu.sass */
+    .menu .menu-links-ul .menu-links-li {
+        font-size: 26px;
+    }
+}
+
+/* line 34, sass/components/_menu.sass */
+.menu .menu-links-ul .menu-links-li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: -40px;
+    background-color: #fff;
+    -webkit-transform: translate3d(-20px, -20px, 0px);
+    transform: translate3d(-20px, -20px, 0px);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* line 45, sass/components/_menu.sass */
+.menu .menu-links-ul .menu-links-li:hover:before {
+    right: -50px;
+    -webkit-transition: right 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: right 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 48, sass/components/_menu.sass */
+.menu .menu-links-ul .menu-links-li:hover .menu-links-a {
+    display: inline-block;
+    position: relative;
+    color: #0d0d0d;
+}
+
+/* line 52, sass/components/_menu.sass */
+.menu .menu-links-ul .menu-links-li .menu-links-a {
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Menu overlay */
+/* line 55, sass/components/_menu.sass */
+.menu-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #fff;
+    width: 0;
+    height: 100%;
+    -webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 64, sass/components/_menu.sass */
+.menu-mask.mask-center {
+    left: 0;
+    width: 100%;
+}
+
+/* line 67, sass/components/_menu.sass */
+.menu-mask.mask-right {
+    left: 100%;
+    width: 0;
+}
+
+/* Show menu button */
+/* line 71, sass/components/_menu.sass */
+.show-menu-button {
+    position: fixed;
+    z-index: 100;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* line 79, sass/components/_menu.sass */
+.show-menu-button .lines {
+    display: block;
+    top: 50%;
+    left: 10px;
+    margin-top: -2px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    position: absolute;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* line 90, sass/components/_menu.sass */
+.show-menu-button .lines::before, .show-menu-button .lines::after {
+    height: 2px;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    position: absolute;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* line 96, sass/components/_menu.sass */
+.show-menu-button .lines::before, .show-menu-button .lines::after {
+    content: "";
+    display: block;
+}
+
+/* line 99, sass/components/_menu.sass */
+.show-menu-button .lines::before {
+    top: -9px;
+    width: 26px;
+    margin-left: 4px;
+}
+
+/* line 103, sass/components/_menu.sass */
+.show-menu-button .lines::after {
+    bottom: -9px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* line 108, sass/components/_menu.sass */
+.show-menu-button:hover .lines::before, .show-menu-button:hover .lines::after {
+    width: 30px;
+    margin-left: 0;
+}
+
+/* line 111, sass/components/_menu.sass */
+.show-menu-button.active .lines {
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+    -webkit-transition-delay: 0.12s;
+    transition-delay: 0.12s;
+}
+
+/* line 114, sass/components/_menu.sass */
+.show-menu-button.active .lines::before {
+    top: 0;
+    opacity: 0;
+    width: 30px;
+    margin-left: 0;
+}
+
+/* line 119, sass/components/_menu.sass */
+.show-menu-button.active .lines::after {
+    bottom: 0;
+    width: 30px;
+    margin-left: 0;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+/* ---------------------------
+  8. SECTIONS
+  --------------------------*/
+/* line 23, sass/components/_sections.sass */
+#main .section-1:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.2)));
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+/* line 26, sass/components/_sections.sass */
+#main .section-1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/noise.gif") repeat;
+    opacity: .15;
+    z-index: -1;
+}
+
+/* line 29, sass/components/_sections.sass */
+#main .section-2:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.4)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* line 32, sass/components/_sections.sass */
+#main .section-2:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/noise.gif") repeat;
+    opacity: .15;
+    z-index: -1;
+}
+
+/* line 35, sass/components/_sections.sass */
+#main .section-3:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* line 38, sass/components/_sections.sass */
+#main .section-3:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/noise.gif") repeat;
+    opacity: .15;
+    z-index: -1;
+}
+
+/* line 41, sass/components/_sections.sass */
+#main .section-4:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* line 44, sass/components/_sections.sass */
+#main .section-4:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/noise.gif") repeat;
+    opacity: .15;
+    z-index: -1;
+}
+
+/* line 47, sass/components/_sections.sass */
+#main .section-5:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(black));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, black 100%);
+}
+
+/* line 50, sass/components/_sections.sass */
+#main .section-5:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/noise.gif") repeat;
+    opacity: .15;
+    z-index: -1;
+}
+
+/* About section */
+/* line 56, sass/components/_sections.sass */
+.section-about .person-img img {
+    /*-webkit-filter: grayscale(1);*/
+    /*filter: grayscale(1);*/
+    width: 100%;
+    height: auto;
+}
+
+/* line 60, sass/components/_sections.sass */
+.section-about .person-about {
+    margin-left: 3em;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+    /* line 60, sass/components/_sections.sass */
+    .section-about .person-about {
+        margin: auto;
+    }
+}
+
+/* line 65, sass/components/_sections.sass */
+.section-about .person-about .person-about-text {
+    margin-top: 40px;
+}
+
+/* line 68, sass/components/_sections.sass */
+.section-about .person-about ul.personal-about-socials span {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Services section */
+/* line 76, sass/components/_sections.sass */
+.section-skills .service-cards {
+    margin-top: 80px;
+}
+
+/* line 78, sass/components/_sections.sass */
+.section-skills .service-cards .service-icon {
+    width: 128px;
+    height: 128px;
+}
+
+/* line 81, sass/components/_sections.sass */
+.section-skills .service-cards .service-header {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+/* Portfolio section */
+/* line 87, sass/components/_sections.sass */
+.section-portfolio .inline-list {
+    margin: 10px 0 0 0;
+}
+
+/* line 89, sass/components/_sections.sass */
+.section-portfolio .portfolio-filters ul > li.portfolio-filter {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Apercu Pro Medium', sans-serif;
+    font-weight: 900;
+    letter-spacing: .3em;
+    font-size: 1.1rem;
+    overflow: hidden;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* line 107, sass/components/_sections.sass */
+.section-portfolio .portfolio-filters ul > li.portfolio-filter:hover, .section-portfolio .portfolio-filters ul > li.portfolio-filter.active {
+    background-color: #fff;
+    color: #000;
+}
+
+/* line 110, sass/components/_sections.sass */
+.section-portfolio .portfolio-grid {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* line 114, sass/components/_sections.sass */
+.section-portfolio .grid-item {
+    width: 285px;
+    height: 185px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+/* line 122, sass/components/_sections.sass */
+.section-portfolio .grid-item .portfolio-image:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 133, sass/components/_sections.sass */
+.section-portfolio .grid-item .portfolio-image:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 0;
+    background: url("../img/plus.png") no-repeat center center;
+    -webkit-transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
+    transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
+}
+
+/* line 145, sass/components/_sections.sass */
+.section-portfolio .grid-item .portfolio-image:hover:before, .section-portfolio .grid-item .portfolio-image:hover:after {
+    opacity: .9;
+}
+
+/* line 148, sass/components/_sections.sass */
+.section-portfolio .grid-item .portfolio-image img {
+    width: 285px;
+    height: 185px;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: 0.9;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Contact section */
+/* line 159, sass/components/_sections.sass */
+.section-contact .mail-form {
+    margin-top: 60px;
+}
+
+/* line 161, sass/components/_sections.sass */
+.section-contact .contact-block {
+    margin-top: 40px;
+}
+
+/* line 163, sass/components/_sections.sass */
+.section-contact .contact-block .contact-icon {
+    display: inline-block;
+}
+
+/* line 165, sass/components/_sections.sass */
+.section-contact .contact-block .contact-icon i {
+    font-size: 84px;
+    line-height: 100px;
+    color: #fff;
+    padding: 5px;
+}
