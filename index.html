@@ -191,7 +191,7 @@
                                  data-anim-delay="7"
                                  data-anim-duration="700">
                             <h3 class="skills-header"><span class="slide-anim" data-anim-delay="8"
-                                                             data-anim-duration="500">Real-time Stenography</span>
+                                                            data-anim-duration="500">Real-time Stenography</span>
                             </h3>
                             <p class="skills-text fadeIn-anim" data-anim-delay="9" data-anim-duration="600">
                                 Using a stenography machine, I transcribe your events live at speeds of up to 250 words
@@ -222,7 +222,7 @@
                                  data-anim-delay="12"
                                  data-anim-duration="700">
                             <h3 class="skills-header"><span class="slide-anim" data-anim-delay="13"
-                                                             data-anim-duration="500">Multilingualism</span>
+                                                            data-anim-duration="500">Multilingualism</span>
                             </h3>
                             <p class="skills-text fadeIn-anim" data-anim-delay="14" data-anim-duration="600">
                                 English</p>
@@ -421,7 +421,7 @@
                     state rather
                     than relying on DOM bindings and listeners.</p>
                 <a href="https://github.com/stanographer/sharedb-react-textbinding"
-                   class="btn-black"
+                   class="btn-black invert"
                    target="_blank">GITHUB REPO</a>
             </div>
         </div>
@@ -438,10 +438,14 @@
                 <img src="img/portfolio/mmh.jpg" class="img-responsive portfolio--item-preview" />
             </div>
             <div class="col-md-6">
-                <p class="lead">I was invited to speak at the Monthly Music Hackathon hosted by Spotify about my various experiments for improved acoustic accessibility for the deaf and hard of hearing, particularly those who rely on realtime captioning. I presented several solutions in which I overlaid realtime-captioned text over a sound spectrogram as well as adding a frequency response graph using the p5.js package. I also live captioned my own talk!</p>
+                <p class="lead">I was invited to speak at the Monthly Music Hackathon hosted by Spotify about my various
+                    experiments for improved acoustic accessibility for the deaf and hard of hearing, particularly those
+                    who rely on realtime captioning. I presented several solutions in which I overlaid
+                    realtime-captioned text over a sound spectrogram as well as adding a frequency response graph using
+                    the p5.js package. I also live captioned my own talk!</p>
                 <a href="https://blog.stanographer.com/hacking-music-accessibility-via-realtime-stenography-recap/"
-                   class="btn-black"
-                   target="_blank">VISIT TALK RECAP</a>
+                   class="btn-black invert"
+                   target="_blank">TALK RECAP</a>
             </div>
         </div>
     </div>
@@ -457,10 +461,15 @@
                 <img src="img/portfolio/soundbar-test.png" class="img-responsive portfolio--item-preview" />
             </div>
             <div class="col-md-6">
-                <p class="lead">Captions for the deaf and hard of hearing reveal the spoken word but don't necessarily capture a comprehensive acoustic experience. Good captioners typically use inline parentheticals to describe ambient noises but for me this wasn't enough. Here I propose using a simultaneous frequency response graph (which a realtime stenographer can show and hide as appropriate via macros on their steno machine) together with realtime captioning as one solution to maximizing accessibility in these situations.</p>
+                <p class="lead">Captions for the deaf and hard of hearing reveal the spoken word but don't necessarily
+                    capture a comprehensive acoustic experience. Good captioners typically use inline parentheticals to
+                    describe ambient noises but for me this wasn't enough. Here I propose using a simultaneous frequency
+                    response graph (which a realtime stenographer can show and hide as appropriate via macros on their
+                    steno machine) together with realtime captioning as one solution to maximizing accessibility in
+                    these situations.</p>
                 <a href="https://blog.stanographer.com/hacking-music-accessibility-via-realtime-stenography-recap/"
-                   class="btn-black"
-                   target="_blank">VISIT PROJECT DESCRIPTION</a>
+                   class="btn-black invert"
+                   target="_blank">PROJECT DESCRIPTION</a>
             </div>
         </div>
     </div>
@@ -476,14 +485,28 @@
                 <img src="img/portfolio/champ-steno.png" class="img-responsive portfolio--item-preview" />
             </div>
             <div class="col-md-6">
-                <p class="lead">Lightboard is a teaching tool I developed for Champion Steno, an online stenography course. Stenographers in training must take speed tests to advance to progressively faster classes until they reach the the minimum certifiable speed of 225 WPM. An important ability for a budding stenographer is not only their ability to take down dictation but also their ability to track and mark speakers as they go. At brick-and-mortar schools, these tests are usually conducted by having multiple teachers sitting in front of the room with name placards indicating whether they're the judge, the plaintiff, the defendant, or any other speaker that might be present at trial or during a deposition.</p>
-                <p class="lead">Online classes present a challenge for the students because they are not clearly able to distinguish who is speaking as these speed tests are usually conducted over video conference. Lightboard allows remote teachers to distinguish speakers by assigning each speaker a keyboard shortcut and pressing the appropriate key causing the current speaker's picture to "light up." The speaker-change events are sent over a WebSockets connection, which then modify the Redux global state, and are propagated nearly instantaneously to the client view.</p>
-                <a href="https://github.com/stanographer/champion-steno-lightboard"
-                   class="btn-black"
-                   target="_blank">GITHUB REPO</a>
-                <a href="https://herokuapp.com/champion-steno-lightboard"
-                   class="btn-black inverted"
-                   target="_blank">DEPLOYED SAMPLE APP</a>
+                <p class="lead">Lightboard is a teaching tool I developed for Champion Steno, an online stenography
+                    course. Stenographers in training must take speed tests to advance to progressively faster classes
+                    until they reach the the minimum certifiable speed of 225 WPM. An important ability for a budding
+                    stenographer is not only their ability to take down dictation but also their ability to track and
+                    mark speakers as they go. At brick-and-mortar schools, these tests are usually conducted by having
+                    multiple teachers sitting in front of the room with name placards indicating whether they're the
+                    judge, the plaintiff, the defendant, or any other speaker that might be present at trial or during a
+                    deposition.</p>
+                <p class="lead">Online classes present a challenge for the students because they are not clearly able to
+                    distinguish who is speaking as these speed tests are usually conducted over video conference.
+                    Lightboard allows remote teachers to distinguish speakers by assigning each speaker a keyboard
+                    shortcut and pressing the appropriate key causing the current speaker's picture to "light up." The
+                    speaker-change events are sent over a WebSockets connection, which then modify the Redux global
+                    state, and are propagated nearly instantaneously to the client view.</p>
+                <div class="button-block">
+                    <a href="https://github.com/stanographer/champion-steno-lightboard"
+                       class="btn-black invert"
+                       target="_blank">GITHUB REPO</a>
+                    <a href="https://herokuapp.com/champion-steno-lightboard"
+                       class="btn-black"
+                       target="_blank">DEPLOYED SAMPLE APP</a>
+                </div>
             </div>
         </div>
     </div>
@@ -496,13 +519,20 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img src="img/portfolio/lomoji.png" class="img-responsive portfolio--item-preview center-block" style="max-height: 50em;" />
+                <img src="img/portfolio/lomoji.png" class="img-responsive portfolio--item-preview center-block"
+                     style="max-height: 50em;" />
             </div>
             <div class="col-md-6">
-                <p class="lead">Lomoji is a tool for polyglots who are learning more than one language simultaneously. As a polyglot myself, I frequently found myself repeatedly using Google Translate to learn how to say a given word or phrase in more than one of my target languages. Thought: "Now I know what 'cumbersome' is in Spanish but, wait, what's 'cumbersome' in Dutch? Or in Japanese? Or in Korean?</p>
-                <p class="lead">Lomoji aims to mitigate this problem by batching translations and presenting the user list of translations, one for each language they are studying (as long as the language is supported by the Google Translate API).</p>
+                <p class="lead">Lomoji is a tool for polyglots who are learning more than one language simultaneously.
+                    As a polyglot myself, I frequently found myself repeatedly using Google Translate to learn how to
+                    say a given word or phrase in more than one of my target languages. Thought: "Now I know what
+                    'cumbersome' is in Spanish but, wait, what's 'cumbersome' in Dutch? Or in Japanese? Or in
+                    Korean?</p>
+                <p class="lead">Lomoji aims to mitigate this problem by batching translations and presenting the user
+                    list of translations, one for each language they are studying (as long as the language is supported
+                    by the Google Translate API).</p>
                 <a href="https://github.com/stanographer/lomoji"
-                   class="btn-black"
+                   class="btn-black invert"
                    target="_blank">GITHUB REPO</a>
             </div>
         </div>
@@ -519,9 +549,14 @@
                 <img src="img/portfolio/session_transcripts.png" class="img-responsive portfolio--item-preview" />
             </div>
             <div class="col-md-6">
-                <p class="lead">SRCCON is a multi-part annual journalism and tech conference that utilizes realtime captioning as a means of accessibility as well as documentation. One of the objectives of the organizers was to have links to live transcriptions available to all attendees as they happen. Through a custom version of Aloft, conference organizers can point website links and Slackbots to custom-generated URLs and extract text from API endpoints. The organizers can then blast etherpad and transcript links over Twitter or Slack to conference-goers as sessions begin and end.</p>
+                <p class="lead">SRCCON is a multi-part annual journalism and tech conference that utilizes realtime
+                    captioning as a means of accessibility as well as documentation. One of the objectives of the
+                    organizers was to have links to live transcriptions available to all attendees as they happen.
+                    Through a custom version of Aloft, conference organizers can point website links and Slackbots to
+                    custom-generated URLs and extract text from API endpoints. The organizers can then blast etherpad
+                    and transcript links over Twitter or Slack to conference-goers as sessions begin and end.</p>
                 <a href="https://srccon.org/documentation/"
-                   class="btn-black"
+                   class="btn-black invert"
                    target="_blank">SRCCON'S SESSION TRANSCRIPTS</a>
             </div>
         </div>
