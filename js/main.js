@@ -234,7 +234,7 @@
   var $portfolioContainer = $('.portfolio-grid');
   $portfolioContainer.magnificPopup({
     delegate: 'a',
-    type:'inline',
+    type: 'inline',
     removalDelay: 100,
     closeBtnInside: true,
     showCloseBtn: true,
@@ -245,15 +245,15 @@
       preload: [0, 1]
     },
     callbacks: {
-      beforeOpen: function () {
+      beforeOpen: function() {
         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-        this.st.mainClass = "mfp-zoom-in";
+        this.st.mainClass = 'mfp-zoom-in';
       },
-      open: function () {
+      open: function() {
         // disable fullpage.js scrolling
         $.fn.fullpage.setAllowScrolling(false);
       },
-      close: function () {
+      close: function() {
         // enable fullpage.js scrolling
         $.fn.fullpage.setAllowScrolling(true);
       }
@@ -324,7 +324,6 @@
    --------------------------------------------- */
   var $form = $('form.mail-form');
   var $statusMassage = $form.find('.status-massage');
-  var captchaResponse = window.grecaptcha.getResponse();
 
   $form.submit(function() {
     $statusMassage.find('*').remove();
@@ -346,23 +345,14 @@
     });
     if (!hasError) {
       var formInput = $(this).serialize();
-      if (captchaResponse.length === 0) {
+      $.post($(this).attr('action'), formInput, function() {
         $statusMassage.find('*').remove();
         $statusMassage.append('' +
           '<span class="success">' +
           '<i class="icon ion-checkmark-round"></i>  ' +
-          'You must prove that you aren\'t a robot.' +
+          'Thank you. Your email was sent successfully.' +
           '</span>');
-      } else {
-        $.post($(this).attr('action'), formInput, function() {
-          $statusMassage.find('*').remove();
-          $statusMassage.append('' +
-            '<span class="success">' +
-            '<i class="icon ion-checkmark-round"></i>  ' +
-            'Thank you. Your email was sent successfully.' +
-            '</span>');
-        });
-      }
+      });
     }
   });
 
@@ -371,7 +361,7 @@
     var imgDefer = document.getElementsByTagName('img');
     for (var i = 0; i < imgDefer.length; i++) {
       if (imgDefer[i].getAttribute('data-src')) {
-        imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+        imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
       }
     }
   }
