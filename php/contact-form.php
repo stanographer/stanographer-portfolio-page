@@ -30,7 +30,8 @@ endif;
 $res = post_captcha($_POST['g-recaptcha-response']);
 
 if (!$res['success']):
-    return "Please check your CAPTCHA and try sending your message again.";
+    echo "You must first prove that you are not a robot.\nPlease make sure the CAPTCHA is completed before sending.";
+    return "You must first prove that you are not a robot.\nPlease make sure the CAPTCHA is completed before sending.";
 
 elseif (filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)):
     $subject = 'Stanographer.com form submission'; // Subject of your email
@@ -52,7 +53,7 @@ elseif (filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)):
     // Send contact information
     $mail = mail( $to, $subject , $message, $header );
 
-    echo 'sent';
+    echo "Your message was sent. Thank you!\n-Stanley";
 else:
     return "error";
 endif;
