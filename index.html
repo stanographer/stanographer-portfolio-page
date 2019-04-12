@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>html{visibility: hidden;opacity:0;}</style>
+    <style>html{visibility: hidden; opacity:0;}</style>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <title>STANOGRAPHER</title>
@@ -43,18 +43,6 @@
           type="text/css"
           onload="this.rel = 'stylesheet'"
     >
-
-    <style>
-        .no-js {
-            visibility: hidden;
-            opacity: 0;
-        }
-
-        .js {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
 
     <!--ReCAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -755,4 +743,14 @@
         defer>
 </script>
 </body>
+<script>
+    // Prevent FOUC.
+  function makeVisible() {
+    const html = document.querySelector('html');
+    html.style.visibility = 'visible';
+    html.style.opacity = '1';
+  }
+
+  document.addEventListener('DOMContentLoaded', makeVisible, false);
+</script>
 </html>
