@@ -1289,3 +1289,8 @@ and (orientation: portrait) {
         padding-right: unset;
     }
 }
+
+html {
+    visibility: visible;
+    opacity: 1;
+}
