@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>html{visibility: hidden; opacity:0;}</style>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <title>STANOGRAPHER</title>
@@ -17,52 +16,16 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- Css -->
-    <link
-            rel="preload"
-            as="style"
-            href="css/assets.css"
-            type="text/css"
-            onload="this.rel = 'stylesheet'">
-    <link
-            rel="preload"
-            as="style"
-            href="css/style.css"
-            type="text/css"
-            onload="this.rel = 'stylesheet'">
-
-    <noscript>
-        <link rel="stylesheet" href="css/assets.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-    </noscript>
+    <link rel="stylesheet" href="css/assets.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Fonts -->
-    <link rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css?family=Poppins:600,900"
-          crossorigin="anonymous"
-          type="text/css"
-          onload="this.rel = 'stylesheet'"
-    >
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600,900" rel="stylesheet">
 
     <!--ReCAPTCHA-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <!-- Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135936833-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag('js', new Date());
-
-      gtag('config', 'UA-135936833-1');
-    </script>
 </head>
-
 <body>
 
 <!-- Preloader -->
@@ -85,13 +48,11 @@
                         <h1>
                             <span class="slide-anim highlighted-yellow"
                                   data-anim-delay="1"
-                                  data-anim-duration="500">
-                                HI, I'M STANLEY SAKAI.
-                            </span>
+                                  data-anim-duration="500">HI, I'M STANLEY SAKAI.</span>
                         </h1>
                         <h3>
                             <span class="slide-anim highlighted-white" data-anim-delay="2" data-anim-duration="500">
-                                Front-end Developer, Real-time Stenographer, Linguist, Polyglot</span>
+                                Web Developer, Real-time Stenographer, Linguist, Polyglot</span>
                             <br />
                             <span class="slide-anim highlighted-white"
                                   data-anim-delay="3"
@@ -104,7 +65,7 @@
                         <div class="button-block">
                             <a href="#contact" class="btn-black fadeIn-anim invert" data-anim-delay="5"
                                data-anim-duration="700">CONTACT ME</a>
-                            <a href="docs/stanley_sakai_resume_2019_online.pdf" class="btn-black fadeIn-anim"
+                            <a href="docs/stanley_sakai_resume_2018.pdf" class="btn-black fadeIn-anim"
                                data-anim-delay="6"
                                data-anim-duration="700">RÉSUMÉ</a>
                         </div><!-- End button block -->
@@ -154,17 +115,46 @@
                         <ul class="inline-list personal-about-socials fadeIn-anim" data-anim-delay="6"
                             data-anim-duration="1000">
                             <li><span class="highlighted-yellow">FOLLOW: </span></li>
-                            <li><a href="https://twitter.com/stanographer" target="_blank"><i class="fa fa-twitter"
-                                                                                              aria-hidden="true"></i></a>
+                            <li>
+                                <a
+                                        href="https://twitter.com/stanographer"
+                                        rel="noreferrer noopener"
+                                        target="_blank">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
                             </li>
-                            <li><a href="https://instagram.com/stanographer" target="_blank"><i class="fa fa-instagram"
-                                                                                                aria-hidden="true"></i></a>
+                            <li>
+                                <a
+                                        href="https://instagram.com/stanographer"
+                                        rel="noreferrer noopener"
+                                        target="_blank">
+                                    <i
+                                            class="fa fa-instagram"
+                                            aria-hidden="true">
+                                    </i>
+                                </a>
                             </li>
-                            <li><a href="https://github.com/stanographer" target="_blank"><i class="fa fa-github"
-                                                                                             aria-hidden="true"></i></a>
+                            <li>
+                                <a href="https://github.com/stanographer"
+                                   rel="noreferrer noopener"
+                                   target="_blank">
+                                <i
+                                    class="fa fa-github"
+                                    aria-hidden="true">
+                                </i>
+                            </a>
                             </li>
-                            <li><a href="https://linkedin.com/in/stanographer" target="_blank"><i class="fa fa-linkedin"
-                                                                                                  aria-hidden="true"></i></a>
+                            <li>
+                                <a
+                                        href="https://linkedin.com/in/stanographer"
+                                        rel="noreferrer noopener"
+                                        target="_blank">
+                                    <i
+                                            class="fa fa-linkedin"
+                                            aria-hidden="true">
+
+                                    </i>
+                                </a>
                             </li>
                         </ul><!-- End social links -->
                     </div><!-- End col -->
@@ -732,25 +722,8 @@
 </div><!-- End menu -->
 
 <!-- Js -->
-<script
-        src="js/assets.js"
-        type="application/javascript"
-        defer>
-</script>
-<script
-        src="js/main.js"
-        type="text/javascript"
-        defer>
-</script>
-</body>
-<script>
-    // Prevent FOUC.
-  function makeVisible() {
-    const html = document.querySelector('html');
-    html.style.visibility = 'visible';
-    html.style.opacity = '1';
-  }
+<script src="js/assets.js" defer></script>
+<script src="js/main.js" defer></script>
 
-  document.addEventListener('DOMContentLoaded', makeVisible, false);
-</script>
+</body>
 </html>

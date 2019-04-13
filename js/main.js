@@ -12,10 +12,10 @@
   /* -----------------------
    * Predefined Variables
    * --------------------- */
-  var $window = $(window),
-    $document = $(document),
-    $body = $('body'),
-    $html = $('html, body');
+  var $window   = $(window),
+      $document = $(document),
+      $body     = $('body'),
+      $html     = $('html, body');
 
   // Variables
   var siteLoad = false;
@@ -25,15 +25,15 @@
   var animEasing = 'cubic-bezier(0.77, 0, 0.175, 1)';
 
   // Sections
-  var $sectionHome = $('.section-home'),
-    $sectionAbout = $('.section-about'),
-    $sectionServices = $('.section-skills'),
-    $sectionPortfolio = $('.section-portfolio'),
-    $sectionContact = $('.section-contact');
+  var $sectionHome      = $('.section-home'),
+      $sectionAbout     = $('.section-about'),
+      $sectionServices  = $('.section-skills'),
+      $sectionPortfolio = $('.section-portfolio'),
+      $sectionContact   = $('.section-contact');
 
   var $onLoadTrigger = $('<div/>', {
     'class': '$onLoadTrigger',
-    css: { 'display': 'none' }
+    css: { 'display': 'none' },
   });
 
   /* -----------------------------
@@ -87,16 +87,16 @@
   var portfolioFilteringMasonry = function() {
     // Caching selectors
     var $portfolioContainer = $('.portfolio-grid'),
-      $portfolioItems = $portfolioContainer.find('.grid-item'),
-      $portfolioFilters = $('.portfolio-filters ul'),
-      $portfolioFilter = $portfolioFilters.find('li.portfolio-filter');
+        $portfolioItems     = $portfolioContainer.find('.grid-item'),
+        $portfolioFilters   = $('.portfolio-filters ul'),
+        $portfolioFilter    = $portfolioFilters.find('li.portfolio-filter');
     // Initialize masonry plugin
     var mas = $portfolioContainer.masonry({
       itemSelector: '.grid-item',
       columnWidth: 285,
       gutter: 5,
       fitWidth: true,
-      transitionDuration: '1s'
+      transitionDuration: '1s',
     });
     // Bind event listener
     $portfolioFilters.on('click', 'li.portfolio-filter', function() {
@@ -142,34 +142,33 @@
   // Prepare page for animation
   var prepareAnimation = function() {
     // Find all elements to animate
-    var $slideAnim = $('.slide-anim'),
-      $fadeInAnim = $('.fadeIn-anim');
+    var $slideAnim  = $('.slide-anim'),
+        $fadeInAnim = $('.fadeIn-anim');
     // Hide all elements
     $slideAnim.css('opacity', 0);
     $fadeInAnim.css('opacity', 0);
 
-
     $slideAnim.each(function() {
-      var $this = $(this),
-        animationDelay = $this.data('anim-delay') || 1,
-        animationDuration = $this.data('anim-duration') || 500;
+      var $this             = $(this),
+          animationDelay    = $this.data('anim-delay') || 1,
+          animationDuration = $this.data('anim-duration') || 500;
       // Wrap in container
       var animContainer = $('<div/>', {
-        'class': 'anim-container'
+        'class': 'anim-container',
       });
       $this.wrap(animContainer);
       // Calculate delay
       var delay = (animationDuration / 1000) + (animationDelay / 10);
       // Prepare transition
       var transitions =
-        'right ' + animationDuration / 1000 + 's ' + animEasing + ' ' + animationDelay / 10 + 's, ' +
-        'left ' + animationDuration / 1000 + 's ' + animEasing + ' ' + delay + 's';
+            'right ' + animationDuration / 1000 + 's ' + animEasing + ' ' + animationDelay / 10 + 's, ' +
+            'left ' + animationDuration / 1000 + 's ' + animEasing + ' ' + delay + 's';
       // Create mask
       var animMask = $('<div/>', {
         'class': 'anim-mask',
         css: {
-          'transition': transitions
-        }
+          'transition': transitions,
+        },
       });
       $this.css('transition', 'opacity 0s linear ' + delay + 's');
       // Insert mask
@@ -198,7 +197,7 @@
           'opacity ' + animationDuration / 500 + 's ' + animEasing + ' ' + animationDelay / 10 + 's';
         $this.css({
           'transition': transitions,
-          'opacity': 1
+          'opacity': 1,
         });
       });
       $section.addClass('animated');
@@ -206,7 +205,6 @@
       return false;
     }
   };
-
 
   /* -----------------------
    * Fullpage.js
@@ -224,9 +222,8 @@
       } else {
         animateSection(index);
       }
-    }
+    },
   });
-
 
   /* ---------------------------------------------
    Portfolio gallery
@@ -242,7 +239,7 @@
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1]
+      preload: [0, 1],
     },
     callbacks: {
       beforeOpen: function() {
@@ -256,18 +253,18 @@
       close: function() {
         // enable fullpage.js scrolling
         $.fn.fullpage.setAllowScrolling(true);
-      }
-    }
+      },
+    },
   });
 
   /* ---------------------------------------------
    Menu
    --------------------------------------------- */
   // Caching selectors
-  var $menu = $('.menu'),
-    $showMenuButton = $('.show-menu-button'),
-    $menuMask = $('.menu-mask'),
-    $fpNav = $('#fp-nav');
+  var $menu           = $('.menu'),
+      $showMenuButton = $('.show-menu-button'),
+      $menuMask       = $('.menu-mask'),
+      $fpNav          = $('#fp-nav');
 
   // Variables
   var menuAnimTime = 400;
@@ -355,16 +352,6 @@
       });
     }
   });
-
-  // Defer images.
-  function init() {
-    var imgDefer = document.getElementsByTagName('img');
-    for (var i = 0; i < imgDefer.length; i++) {
-      if (imgDefer[i].getAttribute('data-src')) {
-        imgDefer[i].setAttribute('src', imgDefer[i].getAttribute('data-src'));
-      }
-    }
-  }
 
   window.onload = init;
 
