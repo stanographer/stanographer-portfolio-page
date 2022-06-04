@@ -2,6 +2,7 @@
 
 body {
   background-color: #3D3D3D;
+  color: #D6D58E;
   font: 1rem 'Karla';
 }
 
@@ -12,3 +13,4 @@ section {
 .headline {
   color: #9FC131;
 }
+
