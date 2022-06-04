@@ -1,0 +1,28 @@
+{
+  "name": "stanographer",
+  "version": "1.0.0",
+  "description": "portfolio paage",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanographer/stanographer-portfolio-page.git"
+  },
+  "author": "stanley sakai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stanographer/stanographer-portfolio-page/issues"
+  },
+  "homepage": "https://github.com/stanographer/stanographer-portfolio-page#readme",
+  "dependencies": {
+    "parcel": "^2.6.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0"
+  }
+}
