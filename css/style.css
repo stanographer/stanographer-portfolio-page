@@ -1293,7 +1293,7 @@ and (orientation: portrait) {
 }
 
 .vox-logo {
-  max-width: 10%;
-    transform: translateY(-0.4rem);
+  max-height: 3rem;
+  transform: translateY(-0.4rem);
 }
 
