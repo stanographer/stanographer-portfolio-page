@@ -14,8 +14,14 @@ p {
 }
 
 section {
-  margin: 3rem;
+  margin: 0 1rem;
   display: inline-block;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin: 0 3rem;
+  }
 }
 
 .bump-font {
@@ -32,8 +38,19 @@ section {
 
 .headline {
   color: #a0cd60;
+  margin: 1rem 0;
   font-size: 3rem;
   display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    margin: 1.5rem 0;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .ik-ben {
@@ -46,9 +63,19 @@ section {
 
 .interpreter {
   color: #ff81d0;
-  position: absolute;
-  top: 68px;
-  right: 183px;
+  text-align: center;
+  margin: .2rem;
+}
+
+@media (min-width: 768px) {
+  .interpreter {
+    text-align: end;
+    margin: 3rem 5rem;
+  }
+}
+
+.interpreter--text {
+  margin: 0 7px;
 }
 
 .ipa {
@@ -70,7 +97,7 @@ section {
   background-color: #0f5959;
   border-radius: 1rem;
   padding: 0 .7rem;
-  transition: background-color .3s ease-in-out;
+  transition: background-color .1s ease-in-out;
   display: inline-block;
 }
 

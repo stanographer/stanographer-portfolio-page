@@ -12,6 +12,8 @@ $karla: 'Karla', sans-serif;
 $maitree: 'Maitree', serif;
 $noto: 'Noto Serif KR', serif;
 
+$sm: 768px;
+
 body {
   background-color: #3D3D3D;
   color: $white;
@@ -28,7 +30,11 @@ p {
 
 section {
   display: inline-block;
-  margin: 3rem;
+  margin: 0 1rem;
+
+  @media (min-width: $sm) {
+    margin: 0 3rem;
+  }
 }
 
 .bump-font {
@@ -47,6 +53,15 @@ section {
   font-size: 3rem;
   color: $green;
   display: inline-block;
+  margin: 1rem 0;
+
+  @media (min-width: $sm) {
+    margin: 1.5rem 0;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 .ik-ben {
@@ -59,9 +74,17 @@ section {
 
 .interpreter {
   color: $pink;
-  position: absolute;
-  top: 68px;
-  right: 183px;
+  margin: .2rem .2rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin: 3rem 5rem;
+    text-align: end;
+  }
+}
+
+.interpreter--text {
+  margin: 0 7px;
 }
 
 .ipa {
@@ -84,7 +107,7 @@ section {
   border-radius: 1rem;
   display: inline-block;
   padding: 0 0.7rem;
-  transition: background-color .3s ease-in-out;
+  transition: background-color .1s ease-in-out;
 }
 
 .wrap {
