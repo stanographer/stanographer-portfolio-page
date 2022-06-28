@@ -1,23 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Maitree:wght@400;500&family=Noto+Serif+KR&display=swap');
 
+// colores
 $cream: #D6D58E;
 $green: #A0CD60;
 $dark-green: #005C53;
 $dark-blue: #0F5959;
+$light-teal: #DEEFE7;
+$mustard: #F2C12E;
 $yellow: #DBF227;
 $pink: #FF81D0;
 $white: #fff;
 
+// lettertypen
 $karla: 'Karla', sans-serif;
 $maitree: 'Maitree', serif;
 $noto: 'Noto Serif KR', serif;
 
+// sizes
 $sm: 768px;
+
+a {
+  box-shadow: inset 0 -5px 0 $mustard;
+  color: $light-teal;
+  text-decoration: none;
+}
 
 body {
   background-color: #3D3D3D;
   color: $white;
   font: 1rem $maitree;
+
+  @media (min-width: $sm) {
+    font: 1.3rem $maitree;
+  }
 }
 
 img {
@@ -30,10 +45,10 @@ p {
 
 section {
   display: inline-block;
-  margin: 0 1rem;
+  margin: 4rem 1rem;
 
   @media (min-width: $sm) {
-    margin: 0 3rem;
+    margin: 5rem 3rem;
   }
 }
 
@@ -43,6 +58,10 @@ section {
 
 .destacado {
   color: $cream;
+}
+
+.font--size-down {
+  font-size: smaller;
 }
 
 .font--weight-medium {
@@ -73,18 +92,28 @@ section {
 }
 
 .interpreter {
-  color: $pink;
-  margin: .2rem .2rem;
+  color: $light-teal;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  margin: 1.5rem;
+  position: absolute;
   text-align: center;
 
   @media (min-width: 768px) {
-    margin: 3rem 5rem;
-    text-align: end;
+    margin: 3rem 3re;
+    justify-content: end;
   }
 }
 
 .interpreter--text {
+  color: #FF81D0;
   margin: 0 7px;
+  font-size: 0.8rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 .ipa {
@@ -102,12 +131,31 @@ section {
   margin: 0.5rem 0;
 }
 
+.slide {
+  position: fixed;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all ease-out 0.3s;
+}
+
+.takeover {
+  background-color: $dark-green;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  
+  .takeover--text {
+    text-align: center;
+  }
+}
+
 .traducido {
   background-color: $dark-blue;
   border-radius: 1rem;
   display: inline-block;
   padding: 0 0.7rem;
-  transition: background-color .1s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
 
 .wrap {

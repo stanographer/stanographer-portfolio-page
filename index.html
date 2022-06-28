@@ -17,7 +17,9 @@
     <script type="module" src="script.js" async defer></script>
 </head>
 <body>
+
   <div class="interpreter">
+    <a href="#" class="toggle-lang">Read in English</a>
     <span class="interpreter--text"></span>
     <span class="interpreter--lang-tag">
       <img class="lang-icon hidden" id="fr" src="img/france.png">
@@ -29,7 +31,8 @@
       <img class="lang-icon hidden" id="en" src="img/united-kingdom.png">
     </span>
   </div>
-  <section>
+
+  <section class="poly-para">
     <h1 class="headline" data-tran="pt|hello!">Olá!</h1>
     <p class="korean">
       <span class="wrap" data-tran="kr|you found me on the internet. shall I introduce myself?">
@@ -50,7 +53,7 @@
         <span data-tran="es|I am">Soy</span> <span class="destacado" data-tran="es|software engineer">ingeniero de software</span> <span data-tran="es|New Yorker">neoyorquino</span> <span data-tran="es|with">con</span>
       </span>
       <span class="wrap" data-tran="es|with polyglot and stenographic tendencies.">
-        una propensidad <span class="destacado" data-tran="es|polyglot">polyglota</span> y <span class="destacado" data-tran="es|stenographic">taquigráfica</span>.
+        una propensión <span class="destacado" data-tran="es|polyglot">polyglota</span> y <span class="destacado" data-tran="es|stenographic">taquigráfica</span>.
       </span>
     </p>
     <p>
@@ -63,8 +66,42 @@
     </p>
     <p>
       <span class="wrap" data-tran="fr|If you would like to connect with me,"><span data-tran="fr|If you would like to connect"><span data-tran="fr|If">Si</span> <span data-tran="fr|you would like">vous souhaitez</span> vous connecter</span> <span class="destacado" data-tran="fr|with me">avec moi</span>,</span>
-      <span class="wrap bump-font" data-tran="fr|click here!">cliquez ici !</span>
+      <span class="wrap bump-font"><a href="#" data-tran="fr|click here!">cliquez ici</a> !</span>
     </p>
   </section>
+
+  <section class="traducao hidden">
+    <h1 class="headline">Hello!</h1>
+    <p>
+      <span class="wrap">You found <span class="destacado">me</span> on the Internet.</span>
+      <span class="wrap">Let's <span class="destacado">connect</span>.</span>
+    </p>
+    <p>
+      <span class="ik-ben bump-font wrap">
+        I'm <span class="destacado">Stanley H. Sakai</span>.
+      </span>
+    </p>
+    <p>
+      <span class="wrap">
+        I am a <span class="destacado">software engineer</span> based in New York City with
+      </span>
+      <span class="wrap">
+        a passion for and tendencies in <span class="destacado">polyglotism</span> and <span class="destacado">stenography</span>.
+      </span>
+    </p>
+    <p>
+     <span class="wrap">The intersection of technology, <span class="destacado">accessibility</span>, and</span>
+     <span class="wrap"><span class="destacado">linguistics</span> is what interests me and fuels my fire.</span>
+    </p>
+    <p>
+      <span class="wrap">To get <span class="destacado">in contact</span> with me,</span>
+      <span class="wrap bump-font"><a href="#">click here!</a></span>
+    </p>
+  </section>
+
+  <div class="takeover">
+    <p class="takeover--text">Mouse over text to view translations.</p>
+  </div>
+
 </body>
 </html>
