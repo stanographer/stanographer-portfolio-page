@@ -4,6 +4,7 @@
 $cream: #D6D58E;
 $green: #A0CD60;
 $dark-green: #005C53;
+$dark-teal-bg: rgb(0, 92, 83, 0.8);
 $dark-blue: #0F5959;
 $light-teal: #DEEFE7;
 $mustard: #F2C12E;
@@ -29,6 +30,7 @@ body {
   background-color: #3D3D3D;
   color: $white;
   font: 1rem $maitree;
+  margin: 0;
 
   @media (min-width: $sm) {
     font: 1.3rem $maitree;
@@ -58,6 +60,60 @@ section {
 
 .destacado {
   color: $cream;
+}
+
+.email--revelador {
+  font-family: $karla;
+  margin: 2.4rem 0;
+  position: relative;
+
+  button {
+    background: linear-gradient(-135deg, $dark-teal-bg, $dark-blue);
+    border: none;
+    color: $white;
+    font-family: $karla;
+    font-size: 1.4rem;
+    padding: 0.6rem;
+  }
+
+  input {
+    color: $cream;
+
+    &:focus ~ .floating--label {
+      color: $cream;
+      left: 20px;
+      font-size: 0.9rem;
+      opacity: 1;
+      transform: translate(-1.2rem, -1.3rem);
+    }
+
+    background-color: transparent;
+    font-size: 1.3rem;
+    font-family: $karla;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 35px;
+  }
+
+  button {
+    display: block;
+  }
+
+  .floating--label {
+    color: $green;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transition: 0.2s ease all;
+  }
+
+  .wrap--input {
+    border-bottom: 2px solid $cream;
+    margin-bottom: 1.6rem;
+    width: 20rem;
+  }
 }
 
 .font--size-down {
@@ -139,10 +195,11 @@ section {
 }
 
 .takeover {
-  background-color: $dark-green;
+  background-color: $dark-teal-bg;
   margin: 0 auto;
   position: absolute;
   top: 40%;
+  transition: opacity 1s ease;
   width: 100%;
   
   .takeover--text {
@@ -156,6 +213,10 @@ section {
   display: inline-block;
   padding: 0 0.7rem;
   transition: background-color .2s ease-in-out;
+}
+
+.direccion--correo {
+  margin: 2.4rem 0;
 }
 
 .wrap {

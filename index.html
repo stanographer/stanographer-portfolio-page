@@ -15,6 +15,7 @@
     <title>Stanley H. Sakai</title>
     <link rel="stylesheet" href="styles.scss" />
     <script type="module" src="script.js" async defer></script>
+    <script type="module" src="correo.js" async defer></script>
 </head>
 <body>
 
@@ -64,10 +65,18 @@
         <span class="destacado" data-tran="nl|that especially to me">dat mij bijzonder</span> <span data-tran="nl|[it] interests">interesseert</span>.
       </span>
     </p>
-    <p>
+    <p class="emailme--paragraph">
       <span class="wrap" data-tran="fr|If you would like to connect with me,"><span data-tran="fr|If you would like to connect"><span data-tran="fr|If">Si</span> <span data-tran="fr|you would like">vous souhaitez</span> vous connecter</span> <span class="destacado" data-tran="fr|with me">avec moi</span>,</span>
-      <span class="wrap bump-font"><a href="#" data-tran="fr|click here!">cliquez ici</a> !</span>
+      <span class="wrap bump-font"><a href="#" class="emailer" data-tran="fr|click here!">cliquez ici</a> !</span>
     </p>
+    <form class="email--revelador hidden">
+      <div class="wrap--input">
+        <input type="text" class="desafio" name="desafio" />
+        <span class="floating--label" data-placeholder="what is 5 - 2?">what is 5 - 2?</span>
+      </div>
+      <button type="submit" value="submit">submit</button>
+    </form>
+    <p class="direccion--correo"></p>
   </section>
 
   <section class="traducao hidden">
